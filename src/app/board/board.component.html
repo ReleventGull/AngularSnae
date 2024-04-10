@@ -1,0 +1,12 @@
+<div class="game">
+    <div class="startContainer">
+        <h1>Snake!</h1>
+        <button>Start</button>
+    </div>
+    
+    <div class="board">
+        <div *ngFor="let rows of gameBoard" class="row">
+            <div *ngFor="let cells of rows" [class.cell]="cells === null" [class.snake]="cells === 1"></div>
+        </div>
+    </div>
+</div>
